@@ -1,0 +1,30 @@
+.footer {
+    height: 66px;
+    /*padding: 20px;*/
+    text-align: center;
+    margin-top: 400px;
+    border-top: 1px solid #30363d;
+}
+
+.footer p {
+    min-height: 26px;
+    font-size: 1.4em;
+    margin-top: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-wrap: nowrap;
+    color: white;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 25px;
+    }
+
+    .footer p {
+        font-size: 1.2em;
+        min-height: 23px;
+    }
+}

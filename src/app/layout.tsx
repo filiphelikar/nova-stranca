@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { RiNextjsLine } from "react-icons/ri";
+import Nav from "@/components/Nav/Nav";
+import Parallax from "../components/Parallax/Parallax"
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <header>
+        <div className="logo"><RiNextjsLine /></div>
+        <Nav />
+      </header>
+      <Parallax />
+        <div className="main-background">
+          <div className="main-content">
+          {children}
+          </div>
+        </div>
+      <Footer />
+      </body>
     </html>
   );
 }
