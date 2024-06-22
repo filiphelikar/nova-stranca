@@ -9,8 +9,12 @@ const page = () => {
   return (
     <section className={styles["main"]}>
       <h2 style={{minHeight: "29px"}} ref={refHeading} >{heading}</h2>
-      <h2 style={{opacity: "0", position: "absolute"}}>{fullHeading}</h2>
       <ContactForm />
+      <div>
+        instagram <br />
+        email <br />
+        pičovyny uprostřed a tak a nějakej border botom a top 90% center třeba
+      </div>
     </section>
   )
 }

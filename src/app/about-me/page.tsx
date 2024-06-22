@@ -14,7 +14,7 @@ const Page = () => {
     60
   );
   const [text, fullText, ref] = useTextRender(
-    `zaměřený především na React a Next.js. Neustále se učím nové technologie a rád objevuji různé programátorské koncepty. Mým cílem je nejen vytvářet elegantní uživatelské rozhraní, ale také pochopit hlubší mechanizmy softwarového inženýrství. Mimo programování mě fascinuje technologie obecně. Dříve jsem se intenzivně zajímal o elektrikařinu, doma mám malý solární systém s fotovoltaickými panely na balkoně, což mě stále inspiruje k dalšímu zkoumání a experimentování.`,
+    "zaměřený především na React a Next.js. Neustále se učím nové technologie a rád objevuji různé programátorské koncepty. Mým cílem je nejen vytvářet elegantní uživatelské rozhraní, ale také pochopit hlubší mechanizmy softwarového inženýrství. Mimo programování mě fascinuje technologie obecně. Dříve jsem se intenzivně zajímal o elektrikařinu, doma mám malý solární systém s fotovoltaickými panely na balkoně, což mě stále inspiruje k dalšímu zkoumání a experimentování.",
     8
   );
 
@@ -44,9 +44,7 @@ const Page = () => {
 
   return (
     <section className={styles["main"]}>
-   
       <h2 ref={refHeading}>{textHeading}</h2>
-  
       <img
         className={styles["solar-img"]}
         src="/img/solar_img.webp"
@@ -54,11 +52,13 @@ const Page = () => {
       />
       <div className={styles["message"]}>
         <div className={styles["place-holder"]}>
-          <h3 className={styles["befor"]} ref={refSubHeading}>{subHeading}</h3>
-          <p className={styles["befor"]} ref={ref}>{text}</p>
+          <h3 className={styles["h3"]} ref={refSubHeading}>
+            {subHeading}
+          </h3>
+          <p ref={ref}>{text}</p>
         </div>
-        <h3 className={styles["after"]} >{fullSubHeading}</h3>
-        <p className={styles["after"]}>{fullText}</p>
+        <h3 className={styles["full"]}>{fullSubHeading}</h3>
+        <p className={styles["full"]}>{fullText}</p>
       </div>
       <div id="certifikat1" className={styles["certifikat"]}>
         <a

@@ -10,8 +10,9 @@ type FormValues = {
 };
 
 const ContactForm = () => {
-
-  const [buttonText, fullBtnText, refButton] = useTextRender("Odeslat", 90)
+  const [buttonText, fullBtnText, refButton] = useTextRender("Odeslat", 120);
+  const [inputLabel, fullInputLabel, refInputLabel] = useTextRender("E-mail:", 100)
+  const [textareaLabel, fullTextareaLabel, refTextareaLabel] = useTextRender("Zpráva:", 100)
 
   const form = useForm<FormValues>({
     defaultValues: {
@@ -23,14 +24,20 @@ const ContactForm = () => {
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
 
-  const onSubmit = (data:FormValues) => {
-    console.log("form submited", data)
-}
+  const onSubmit = (data: FormValues) => {
+    console.log("form submited", data);
+  };
 
   return (
-    <form className={styles["form"]} onSubmit={handleSubmit(onSubmit)} noValidate>
-      <label htmlFor="email">E-mail</label> <br />
+    <form
+      className={styles["form"]}
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+    >
+      <label htmlFor="email" ref={refInputLabel}>{inputLabel} <span style={{color: "red"}}>*</span></label>
+
       <input
+        className={styles["input"]}
         type="email"
         id="email"
         {...register("email", {
@@ -42,15 +49,14 @@ const ContactForm = () => {
           required: {
             value: true,
             message: "email je poviný",
-          }
+          },
         })}
       />
-      <br />
-      <p className="error">{errors.email?.message}</p>
-      <br />
-      <label htmlFor="message">Zpráva</label> <br />
-      <input
-        type="message"
+
+      <label htmlFor="message" ref={refTextareaLabel}>{textareaLabel} <span style={{color: "red"}}>*</span></label>
+      <p className={styles["error"]}>{errors.email?.message}</p>
+      <textarea
+        className={styles["textarea"]}
         id="message"
         {...register("message", {
           required: {
@@ -59,18 +65,12 @@ const ContactForm = () => {
           },
         })}
       />
-      <br />
-      <p className="error">{errors.message?.message}</p>
-      <br />
-      <button ref={refButton} style={{ position: 'relative', display: 'inline-block' }}>
-        <span style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-          {buttonText}
-        </span>
-        <span style={{ opacity: 0, visibility: 'hidden', whiteSpace: 'nowrap' }}>
-          {fullBtnText}
-        </span>
-    </button>
 
+      <button className={styles["button"]} ref={refButton}>
+        <span className={styles["button-text"]}>{buttonText}</span>
+        <span className={styles["full-btn-text"]}>{fullBtnText}</span>
+      </button>
+      <p className={styles["error"]}>{errors.message?.message}</p>
     </form>
   );
 };

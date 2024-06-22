@@ -33,10 +33,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-
 }
 
-.after  {
+.full  {
     opacity: 0;
 }
 
@@ -82,5 +81,4 @@
         padding: 20px;
         margin-top: 0px;
     }
-    
 }
