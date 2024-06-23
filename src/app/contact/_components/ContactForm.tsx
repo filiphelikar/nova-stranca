@@ -24,9 +24,44 @@ const ContactForm = () => {
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
 
+  const send = async (data:any,) => {
+  
+    const payload = {
+      access_key: "8d74fdac-e692-4bfc-b99d-0f6515cc8870",
+      subject: "filiphelikar.cz",
+      email: data.email,
+      message: data.message
+    }
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSuccess(true)
+        setEmail("")
+        setMessage("")
+        setError("")
+      } else {
+        setSuccess(false)
+        setError(result.message)
+      }
+    } catch (error) {
+      setSuccess(false)
+      setError("An error occurred while submitting the form.")
+    }
+  }
+
   const onSubmit = (data: FormValues) => {
-    console.log("form submited", data);
-  };
+    send(data)
+  }
 
   return (
     <form

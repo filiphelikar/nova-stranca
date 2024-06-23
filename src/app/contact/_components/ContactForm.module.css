@@ -29,11 +29,36 @@
     font-size: 15px;
     font-family: "ubuntu";
     resize: none;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: rgb(2, 2, 2);
     border: var(--main-border);
     border-radius: 5px;
     color: #ffffff;
+    scrollbar-width: thin; 
+    scrollbar-color: #222222 transparent; 
+}
+
+.textarea::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    border-radius: 2px;
+    min-height: 30%;
+}
+
+.textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #494949;
+    cursor: pointer;
+}
+
+.textarea {
+    -ms-overflow-style: -ms-autohiding-scrollbar; 
 }
 
 .error {

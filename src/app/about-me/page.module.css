@@ -6,6 +6,7 @@
 }
 
 .main h2 {
+    min-height: 29px;
     grid-column: span 2; 
 }
 

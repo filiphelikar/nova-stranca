@@ -6,7 +6,42 @@
 }
 
 .main h2 {
-     grid-column: span 2; 
+    min-height: 29px;
+    grid-column: span 2; 
+ }
+
+ .info-container {
+    text-align: center;
+    padding: 20px 50px;
+    border-bottom: var(--main-border);
+    border-top: var(--main-border);
+    font-size: large;
+    position: relative;
+ }
+
+ .container {
+    width: fit-content;
+    height: fit-content;
+    margin: 35px auto 0;
+
+ }
+
+ .a-container {
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 20px;
+ }
+
+ .visible {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+ }
+
+ .hide {
+    opacity: 0;
  }
 
 @media (max-width: 768px) {

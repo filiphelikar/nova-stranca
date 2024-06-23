@@ -1,11 +1,11 @@
-import Three from "./_components/Three"
 import styles from "./page.module.css"
+import AsciiArt from "./_AsciiArt/AsciiArt";
 
 const Page = () => {
 
   return (
     <div className={styles["main"]}>
-          {/* <Three /> */}  
+          <AsciiArt />
     </div>
   );
 };
