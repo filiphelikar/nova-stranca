@@ -7,11 +7,10 @@ const Parallax = () => {
   useEffect(() => {
     const parallaxScroll = () => {
       const value = window.scrollY;
-
       gsap.to("#stars", { duration: 0.5, x: value * -0.15, y: value * -0.15, ease: "power1.out" });
       gsap.to("#moon", { duration: 0.5, x: value * -0.35, y: value * -0.35, ease: "power1.out" });
       gsap.to("#mountainsFront", { duration: 0.5, y: value * 0.001, scale: 1 + value * 0.0001, filter: `blur(${value * 0.007}px)`, ease: "power1.out" });
-      gsap.to("#heading", { duration: 0.5, marginTop: value * 0.8, filter: `blur(${value * 0.002}px)`, ease: "power1.out" });
+      gsap.to("#heading", { duration: 0.5, marginTop: value * 0.8, filter: `blur(${value * 0.002}px)`, ease: "power1.out" }); 
     };
 
     window.addEventListener("scroll", parallaxScroll);
