@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ContactForm.module.css";
 import { useForm } from "react-hook-form";
 import { useTextRender } from "@/utils/useTextRender";
@@ -13,6 +13,8 @@ const ContactForm = () => {
   const [buttonText, fullBtnText, refButton] = useTextRender("Odeslat", 120);
   const [inputLabel, fullInputLabel, refInputLabel] = useTextRender("E-mail:", 100)
   const [textareaLabel, fullTextareaLabel, refTextareaLabel] = useTextRender("Zpráva:", 100)
+  const [message, setMessage] = useState<any>({message: "", class: "", display: 0})
+  const [success, setSuccess] = useState(false)
 
   const form = useForm<FormValues>({
     defaultValues: {
@@ -39,23 +41,32 @@ const ContactForm = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(payload)
+        body: /* JSON.stringify(payload) */ ""
       })
 
       const result = await response.json()
 
       if (result.success) {
+        setMessage({message:"Úspěšně odesláno", class: "message-success", display: 1})
         setSuccess(true)
-        setEmail("")
-        setMessage("")
-        setError("")
+
+        setTimeout(() => {
+          console.log(message)
+          setMessage({ message:"Úspěšně odesláno", class: "message-success", display: 0 });
+          setSuccess(false);
+        }, 2000); 
+       
       } else {
-        setSuccess(false)
-        setError(result.message)
+        setMessage({message:"Zprávu se nepodařilo odeslat", class: "message-error", display: 1})
+        setSuccess(true)
+
+        setTimeout(() => {
+          setMessage({ message:"Zprávu se nepodařilo odeslat", class: "message-error", display: 0 });
+          setSuccess(false);
+        }, 2000); 
       }
     } catch (error) {
-      setSuccess(false)
-      setError("An error occurred while submitting the form.")
+      console.log(error)
     }
   }
 
@@ -106,6 +117,7 @@ const ContactForm = () => {
         <span className={styles["full-btn-text"]}>{fullBtnText}</span>
       </button>
       <p className={styles["error"]}>{errors.message?.message}</p>
+      <p style={{opacity: message.display}} className={styles[message.class]}>{message.message}</p>  
     </form>
   );
 };

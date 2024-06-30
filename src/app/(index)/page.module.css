@@ -3,9 +3,26 @@
 }
 
 .img-container {
-    padding: 20px;
+    width: 100%;
+    padding: 50px;
+    height: fit-content;
+    background: var(--main-image-gradiend);
+    border: var(--main-border);
+    border-radius: 5px;
+    position: relative;
 }
 
 .img {
     width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .img-container {
+        padding: 20px;
+    }
+    .main {
+        margin-top: 0px;
+    }
 }
