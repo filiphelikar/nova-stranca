@@ -2,6 +2,10 @@
 import React, { useEffect, useRef } from 'react';
 import Styles from './RightNav.module.css';
 import {usePathname} from "next/navigation";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleLanguage } from '../../app/_GlobalRedux/store';
+import { RootState } from '../../app/_GlobalRedux/store';
+import Link from 'next/link';
 
 interface RightNavProps {
   open: boolean;
@@ -54,16 +58,29 @@ const RightNav: React.FC<RightNavProps> = ({ open }) => {
     return () => window.removeEventListener('resize', resize); 
   }, [open]);
 
+  const dispatch = useDispatch();
+  const lang = useSelector((state: RootState) => state.language.lang);
+
+  const Toggle = () => {
+    dispatch(toggleLanguage())
+  };
+
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path ? 'active' : '';
 
   return (
     <ul className={Styles.ul} ref={navRef}>
-      <li><a style={{color: isActive("/") ? 'grey' : ''}} href="/">Home</a></li>
-      <li><a style={{color: isActive("/project") ? 'grey' : ''}} href="/project">Projects</a></li>
-      <li><a style={{color: isActive("/about-me") ? 'grey' : ''}} href="/about-me">About me</a></li>
-      <li><a style={{color: isActive("/contact") ? 'grey' : ''}} href="/contact">Contact</a></li>
+      <li><Link scroll={false} style={{color: isActive("/") ? 'grey' : ''}} href="/">Home</Link></li>
+      <li><Link  scroll={false} style={{color: isActive("/project") ? 'grey' : ''}} href="/project">Projects</Link></li>
+      <li><Link scroll={false} style={{color: isActive("/about-me") ? 'grey' : ''}} href="/about-me">About me</Link></li>
+      <li><Link scroll={false} style={{color: isActive("/contact") ? 'grey' : ''}} href="/contact">Contact</Link></li>
+      <li>
+      <button onClick={() => Toggle()}>
+      { lang }
+    </button>
+      </li>
+      
     </ul>
   );
 }

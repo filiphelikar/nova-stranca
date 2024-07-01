@@ -2,8 +2,15 @@
 import React from "react";
 import styles from "./page.module.css";
 import { useTextRender } from "../../utils/useTextRender";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../app/_GlobalRedux/store';
+
 
 const page = () => {
+
+  const lang = useSelector((state: RootState) => state.language.lang);
+  const translations = useSelector((state: RootState) => state.language.translations[lang as keyof (typeof state.language.translations)])
+
   const [heading, _, refHeading] = useTextRender("Projects:", 60);
   const [subheadingCalc, fullSubheadingCalc, refSubheadingCalc] = useTextRender(
     "Bitcoin Private Key Range Calculator",
@@ -11,14 +18,21 @@ const page = () => {
   );
 
   const [infoCalc, fullInfoCalc, refCalc] = useTextRender(
-    "Tento projekt je kalkulačka pro výpočet rozsahu privátních klíčů pro bitcoin puzzle a také pro výpočet rychlosti brute force útoku. Aplikace byla vytvořena za použití HTML, CSS, JavaScriptu a Svelte. Projekt demonstruje moje schopnosti v oblasti kryptografie a tvorby uživatelsky přívětivých rozhraní.",
+    translations.Projects.infoCalc,
     10
   );
 
   const [subheadingLocal, fullSubheadingLocal, refSubheadingLocal] = useTextRender("Local Chat", 60);
 
   const [infoLocal, fullInfoLocal, refLocal] = useTextRender(
-    "Local Chat je chatovací aplikace, která umožňuje uživatelům komunikovat v reálném čase. Aplikace využívá Firebase databázi pro správu uživatelů a jejich zpráv. Přestože je logika přihlašování implementována na front-endu, projekt ukazuje moje schopnosti v práci s databázemi a real-time komunikací.",
+    translations.Projects.infoLocal,
+    10
+  );
+
+  const [subheadingPhoto, fullSubheadingPhoto, refSubheadingPhoto] = useTextRender("Photo by Filip", 60);
+
+  const [infoPhoto, fullInfoPhoto, refPhoto] = useTextRender(
+    translations.Projects.infoPhoto,
     10
   );
 
@@ -65,6 +79,26 @@ const page = () => {
         target="blank"
       >
         <img className={styles["img"]} src="/img/local_chat.png" alt="" />
+      </a>
+       <a
+        href="https://github.com/filiphelikar/filiphelikar"
+        target="blank"
+      >
+        <img className={styles["img"]} src="/img/photo_page.png" alt="" />
+      </a>
+      <a
+        href="https://github.com/filiphelikar/filiphelikar"
+        target="blank"
+        className={styles["info"]}
+      >
+        <div className={styles["rendered-text"]}>
+          <h3 ref={refSubheadingPhoto}>{subheadingPhoto}</h3>
+          <p ref={refPhoto}>{infoPhoto}</p>
+        </div>
+        <div className={styles["place-holder"]}>
+          <h3>{fullSubheadingPhoto}</h3>
+          <p>{fullInfoPhoto}</p>
+        </div>
       </a>
     </div>
   );

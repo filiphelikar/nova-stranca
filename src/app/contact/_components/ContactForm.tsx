@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./ContactForm.module.css";
 import { useForm } from "react-hook-form";
 import { useTextRender } from "@/utils/useTextRender";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleLanguage } from '../../../app/_GlobalRedux/store';
+import { RootState } from '../../../app/_GlobalRedux/store';
 
 type FormValues = {
   email: string;
@@ -10,9 +13,13 @@ type FormValues = {
 };
 
 const ContactForm = () => {
-  const [buttonText, fullBtnText, refButton] = useTextRender("Odeslat", 120);
-  const [inputLabel, fullInputLabel, refInputLabel] = useTextRender("E-mail:", 100)
-  const [textareaLabel, fullTextareaLabel, refTextareaLabel] = useTextRender("Zpráva:", 100)
+
+  const lang = useSelector((state: RootState) => state.language.lang);
+  const translations = useSelector((state: RootState) => state.language.translations[lang as keyof (typeof state.language.translations)])
+
+  const [buttonText, fullBtnText, refButton] = useTextRender(translations.contactForm.buttonText, 120);
+  const [inputLabel, _, refInputLabel] = useTextRender("E-mail:", 100)
+  const [textareaLabel, __, refTextareaLabel] = useTextRender(translations.contactForm.textAreaLable, 100)
   const [message, setMessage] = useState<any>({message: "", class: "", display: 0})
   const [success, setSuccess] = useState(false)
 
@@ -41,27 +48,26 @@ const ContactForm = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: /* JSON.stringify(payload) */ ""
+        body: JSON.stringify(payload) 
       })
 
       const result = await response.json()
 
       if (result.success) {
-        setMessage({message:"Úspěšně odesláno", class: "message-success", display: 1})
+        setMessage({message: translations.contactForm.messageSuccess, class: "message-success", display: 1})
         setSuccess(true)
 
         setTimeout(() => {
-          console.log(message)
-          setMessage({ message:"Úspěšně odesláno", class: "message-success", display: 0 });
+          setMessage({ message: translations.contactForm.messageSuccess, class: "message-success", display: 0 });
           setSuccess(false);
         }, 2000); 
        
       } else {
-        setMessage({message:"Zprávu se nepodařilo odeslat", class: "message-error", display: 1})
+        setMessage({message: translations.contactForm.messageNotSuccess, class: "message-error", display: 1})
         setSuccess(true)
 
         setTimeout(() => {
-          setMessage({ message:"Zprávu se nepodařilo odeslat", class: "message-error", display: 0 });
+          setMessage({ message:translations.contactForm.messageNotSuccess, class: "message-error", display: 0 });
           setSuccess(false);
         }, 2000); 
       }
@@ -90,24 +96,24 @@ const ContactForm = () => {
           pattern: {
             value:
               /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/,
-            message: "špatný formát emailu",
+            message: "emailFormat",
           },
           required: {
             value: true,
-            message: "email je poviný",
+            message: "emailRequired",
           },
         })}
       />
 
       <label htmlFor="message" ref={refTextareaLabel}>{textareaLabel} <span style={{color: "red"}}>*</span></label>
-      <p className={styles["error"]}>{errors.email?.message}</p>
+      <p className={styles["error"]}>{translations.contactForm[errors.email?.message as keyof (typeof translations.contactForm)]}</p>
       <textarea
         className={styles["textarea"]}
         id="message"
         {...register("message", {
           required: {
             value: true,
-            message: "zpráva je poviná",
+            message: "messageRequired",
           },
         })}
       />
@@ -116,7 +122,7 @@ const ContactForm = () => {
         <span className={styles["button-text"]}>{buttonText}</span>
         <span className={styles["full-btn-text"]}>{fullBtnText}</span>
       </button>
-      <p className={styles["error"]}>{errors.message?.message}</p>
+      <p className={styles["error"]}>{translations.contactForm[errors.message?.message as keyof (typeof translations.contactForm)]}</p>
       <p style={{opacity: message.display}} className={styles[message.class]}>{message.message}</p>  
     </form>
   );

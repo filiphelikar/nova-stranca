@@ -5,6 +5,7 @@ import { RiNextjsLine } from "react-icons/ri";
 import Nav from "@/components/Nav/Nav";
 import Parallax from "../components/Parallax/Parallax"
 import Footer from "@/components/Footer/Footer";
+import { Providers } from "../app/_GlobalRedux/Provider"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <Providers>
       <header>
         <div className="logo"><RiNextjsLine /></div>
         <Nav />
@@ -28,10 +30,11 @@ export default function RootLayout({
       <Parallax />
         <div className="main-background">
           <div className="main-content">
-          {children}
+              {children}
           </div>
         </div>
       <Footer />
+      </Providers>
       </body>
     </html>
   );

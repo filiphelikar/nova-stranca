@@ -3,18 +3,24 @@ import React, { useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
 import styles from "./page.module.css";
 import { useTextRender } from "../../utils/useTextRender";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../app/_GlobalRedux/store';
 
 const Page = () => {
+
+  const lang = useSelector((state: RootState) => state.language.lang);
+  const translations = useSelector((state: RootState) => state.language.translations[lang as keyof (typeof state.language.translations)])
+
   const [textHeading, FullTextHeading, refHeading] = useTextRender(
     "About Me:",
     60
   );
   const [subHeading, fullSubHeading, refSubHeading] = useTextRender(
-    "Jsem začínající frontend developer",
+    translations.aboutMe.subHeading,
     60
   );
   const [text, fullText, ref] = useTextRender(
-    "zaměřený především na React a Next.js. Neustále se učím nové technologie a rád objevuji různé programátorské koncepty. Mým cílem je nejen vytvářet elegantní uživatelské rozhraní, ale také pochopit hlubší mechanizmy softwarového inženýrství. Mimo programování mě fascinuje technologie obecně. Dříve jsem se intenzivně zajímal o elektrikařinu, doma mám malý solární systém s fotovoltaickými panely na balkoně, což mě stále inspiruje k dalšímu zkoumání a experimentování.",
+    translations.aboutMe.text,
     8
   );
 
