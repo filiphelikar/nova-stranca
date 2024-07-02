@@ -13,7 +13,7 @@ const Burger: React.FC = () => {
         <div />
         <div />
       </div>
-      <RightNav open={open} />
+      <RightNav open={open} setOpen={setOpen} />
     </>
   );
 }

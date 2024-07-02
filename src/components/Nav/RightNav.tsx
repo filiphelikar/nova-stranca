@@ -9,9 +9,10 @@ import Link from 'next/link';
 
 interface RightNavProps {
   open: boolean;
+  setOpen: any
 }
 
-const RightNav: React.FC<RightNavProps> = ({ open }) => {
+const RightNav: React.FC<RightNavProps> = ({ open, setOpen }) => {
   const navRef = useRef<HTMLUListElement | null>(null);
   
   useEffect(() => {
@@ -70,18 +71,21 @@ const RightNav: React.FC<RightNavProps> = ({ open }) => {
   const isActive = (path: string) => pathname === path ? 'active' : '';
 
   return (
+    <>
+    {open && <div onClick={() => setOpen(!open)} className={Styles["cloasing"]}></div>}
     <ul className={Styles.ul} ref={navRef}>
-      <li><Link scroll={false} style={{color: isActive("/") ? 'grey' : ''}} href="/">Home</Link></li>
-      <li><Link  scroll={false} style={{color: isActive("/project") ? 'grey' : ''}} href="/project">Projects</Link></li>
-      <li><Link scroll={false} style={{color: isActive("/about-me") ? 'grey' : ''}} href="/about-me">About me</Link></li>
-      <li><Link scroll={false} style={{color: isActive("/contact") ? 'grey' : ''}} href="/contact">Contact</Link></li>
+      <li><Link onClick={() => setOpen(!open)} scroll={false} style={{color: isActive("/") ? 'grey' : ''}} href="/">Home</Link></li>
+      <li><Link  onClick={() => setOpen(!open)} scroll={false} style={{color: isActive("/project") ? 'grey' : ''}} href="/project">Projects</Link></li>
+      <li><Link  onClick={() => setOpen(!open)} scroll={false} style={{color: isActive("/about-me") ? 'grey' : ''}} href="/about-me">About me</Link></li>
+      <li><Link  onClick={() => setOpen(!open)} scroll={false} style={{color: isActive("/contact") ? 'grey' : ''}} href="/contact">Contact</Link></li>
       <li>
-      <button onClick={() => Toggle()}>
+      <button onClick={() => {Toggle(); setOpen(!open)}}>
       { lang }
     </button>
       </li>
       
     </ul>
+    </>
   );
 }
 
