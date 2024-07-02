@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { useTextRender } from "../../utils/useTextRender";
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../app/_GlobalRedux/store';
+import Link from "next/link";
 
 
 const page = () => {
@@ -33,6 +34,13 @@ const page = () => {
 
   const [infoPhoto, fullInfoPhoto, refPhoto] = useTextRender(
     translations.Projects.infoPhoto,
+    10
+  );
+
+  const [subheadingProject, fullSubheadingProject, refSubheadingProject] = useTextRender("Filip Helikar.cz", 60);
+
+  const [infoProject, fullInfoProject, refProject] = useTextRender(
+    translations.Projects.infoProject,
     10
   );
 
@@ -100,6 +108,24 @@ const page = () => {
           <p>{fullInfoPhoto}</p>
         </div>
       </a>
+      <Link
+        href="/"
+        className={styles["info"]}
+      >
+        <div className={styles["rendered-text"]}>
+          <h3 ref={refSubheadingProject}>{subheadingProject}</h3>
+          <p ref={refProject}>{infoProject}</p>
+        </div>
+        <div className={styles["place-holder"]}>
+          <h3>{fullSubheadingProject}</h3>
+          <p>{fullInfoProject}</p>
+        </div>
+      </Link>
+      <Link
+        href="/"
+      >
+        <img className={styles["img"]} src="/img/portfolio_page.png" alt="" />
+      </Link>
     </div>
   );
 };
