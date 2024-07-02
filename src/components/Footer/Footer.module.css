@@ -10,7 +10,7 @@
     min-height: 26px;
     font-size: 1.4em;
     margin-top: 20px;
-    font-family: "Ubuntu", sans-serif;
+    font-family: var(--font-mono);
     font-weight: 500;
     font-style: normal;
     text-wrap: nowrap;
