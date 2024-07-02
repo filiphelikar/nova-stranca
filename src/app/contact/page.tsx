@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 
-const page = () => {
+const Page = () => {
   const [heading, fullHeading, refHeading] = useTextRender("Contact:", 60);
 
   const [instagram, fullInstagram, refInstagram] = useTextRender(
@@ -75,4 +75,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -7,7 +7,7 @@ import { RootState } from '../../app/_GlobalRedux/store';
 import Link from "next/link";
 
 
-const page = () => {
+const Page = () => {
 
   const lang = useSelector((state: RootState) => state.language.lang);
   const translations = useSelector((state: RootState) => state.language.translations[lang as keyof (typeof state.language.translations)])
@@ -175,4 +175,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
