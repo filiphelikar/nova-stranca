@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { useTextRender } from "../../utils/useTextRender";
 import { useDispatch, useSelector } from 'react-redux';
@@ -44,6 +44,24 @@ const page = () => {
     10
   );
 
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    handleResize()
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className={styles["main"]}>
       <h2 ref={refHeading}>{heading}</h2>
@@ -68,7 +86,7 @@ const page = () => {
           <p>{fullInfoCalc}</p>
         </div>
       </a>
-      <a
+     {!isMobile && <a
         href="https://github.com/filiphelikar/local-chatting-app"
         target="blank"
         className={styles["info"]}
@@ -81,13 +99,27 @@ const page = () => {
           <h3>{fullSubheadingLocal}</h3>
           <p>{fullInfoLocal}</p>
         </div>
-      </a>
+      </a>}
       <a
         href="https://github.com/filiphelikar/local-chatting-app"
         target="blank"
       >
         <img className={styles["img"]} src="/img/local_chat.png" alt="" />
       </a>
+      {isMobile && <a
+        href="https://github.com/filiphelikar/local-chatting-app"
+        target="blank"
+        className={styles["info"]}
+      >
+        <div className={styles["rendered-text"]}>
+          <h3 ref={refSubheadingLocal}>{subheadingLocal}</h3>
+          <p ref={refLocal}>{infoLocal}</p>
+        </div>
+        <div className={styles["place-holder"]}>
+          <h3>{fullSubheadingLocal}</h3>
+          <p>{fullInfoLocal}</p>
+        </div>
+      </a>}
        <a
         href="https://github.com/filiphelikar/filiphelikar"
         target="blank"
@@ -108,7 +140,7 @@ const page = () => {
           <p>{fullInfoPhoto}</p>
         </div>
       </a>
-      <Link
+      {!isMobile && <Link
         href="/"
         className={styles["info"]}
       >
@@ -120,12 +152,25 @@ const page = () => {
           <h3>{fullSubheadingProject}</h3>
           <p>{fullInfoProject}</p>
         </div>
-      </Link>
+      </Link>}
       <Link
         href="/"
       >
         <img className={styles["img"]} src="/img/portfolio_page.png" alt="" />
       </Link>
+      {isMobile && <Link
+        href="/"
+        className={styles["info"]}
+      >
+        <div className={styles["rendered-text"]}>
+          <h3 ref={refSubheadingProject}>{subheadingProject}</h3>
+          <p ref={refProject}>{infoProject}</p>
+        </div>
+        <div className={styles["place-holder"]}>
+          <h3>{fullSubheadingProject}</h3>
+          <p>{fullInfoProject}</p>
+        </div>
+      </Link>}
     </div>
   );
 };
