@@ -33,7 +33,6 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
- 
 }
 
 .ul li button:hover {
@@ -49,9 +48,15 @@
     height: 100vh;
     top: 0;
     left: 0;
+    display: none;
 }
 
 @media (max-width: 768px) {
+
+    .cloasing {
+        display: block;
+    }
+
     .ul {
         flex-direction: column;
         background: rgba(76, 60, 100, 0.9);
