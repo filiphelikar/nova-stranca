@@ -6,6 +6,7 @@ import Nav from "@/components/Nav/Nav";
 import Parallax from "../components/Parallax/Parallax"
 import Footer from "@/components/Footer/Footer";
 import { Providers } from "../app/_GlobalRedux/Provider"
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
+    <Head>
+    <meta name="google-site-verification" content="MM4TstpXUw18nxudSmty14AZ5vI2ZzUqoeJAiciNxVc" />
+    </Head>
     <html lang="en">
       <body className={inter.className}>
       <Providers>
@@ -37,5 +42,6 @@ export default function RootLayout({
       </Providers>
       </body>
     </html>
+    </>
   );
 }
