@@ -3,8 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./ContactForm.module.css";
 import { useForm } from "react-hook-form";
 import { useTextRender } from "@/utils/useTextRender";
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleLanguage } from '../../../app/_GlobalRedux/store';
+import { useSelector } from 'react-redux';
 import { RootState } from '../../../app/_GlobalRedux/store';
 
 type FormValues = {
@@ -21,7 +20,6 @@ const ContactForm = () => {
   const [inputLabel, _, refInputLabel] = useTextRender("E-mail:", 100)
   const [textareaLabel, __, refTextareaLabel] = useTextRender(translations.contactForm.textAreaLable, 100)
   const [message, setMessage] = useState<any>({message: "", class: "", display: 0})
-  const [success, setSuccess] = useState(false)
 
   const form = useForm<FormValues>({
     defaultValues: {
@@ -55,20 +53,16 @@ const ContactForm = () => {
 
       if (result.success) {
         setMessage({message: translations.contactForm.messageSuccess, class: "message-success", display: 1})
-        setSuccess(true)
 
         setTimeout(() => {
           setMessage({ message: translations.contactForm.messageSuccess, class: "message-success", display: 0 });
-          setSuccess(false);
         }, 2000); 
        
       } else {
         setMessage({message: translations.contactForm.messageNotSuccess, class: "message-error", display: 1})
-        setSuccess(true)
 
         setTimeout(() => {
           setMessage({ message:translations.contactForm.messageNotSuccess, class: "message-error", display: 0 });
-          setSuccess(false);
         }, 2000); 
       }
     } catch (error) {

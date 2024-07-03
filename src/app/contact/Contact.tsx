@@ -8,7 +8,7 @@ import { IoIosMail } from "react-icons/io";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 
 const Contact = () => {
-  const [heading, fullHeading, refHeading] = useTextRender("Contact:", 60);
+  const [heading, _, refHeading] = useTextRender("Contact:", 60);
 
   const [instagram, fullInstagram, refInstagram] = useTextRender(
     "instagram",
