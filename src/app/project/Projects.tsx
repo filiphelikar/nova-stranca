@@ -83,17 +83,17 @@ const Project = () => {
         <InfoCard
           heading={"Portfolio Page"}
           text={translations.Projects.infoProject}
-          Link={"https://filiphelikar.cz"}
+          Link={"https://github.com/filiphelikar/nova-stranca"}
         />
       )}
-      <a href="https://filiphelikar.cz" target="blank">
+      <a href="https://github.com/filiphelikar/nova-stranca" target="blank">
         <img className={styles["img"]} src="/img/portfolio_page.png" alt="" />
       </a>
       {isMobile && (
         <InfoCard
           heading={"Portfolio Page"}
           text={translations.Projects.infoProject}
-          Link={"https://filiphelikar.cz"}
+          Link={"https://github.com/filiphelikar/nova-stranca"}
         />
       )}
     </div>
