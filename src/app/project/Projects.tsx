@@ -36,12 +36,23 @@ const Project = () => {
   return (
     <div className={styles["main"]}>
       <h2 ref={refHeading}>{heading}</h2>
-      <a href="https://github.com/filiphelikar/privatekeyrange" target="blank">
+      <a
+        className={styles["img-container"]}
+        href="https://github.com/filiphelikar/privatekeyrange"
+        target="blank"
+      >
         <img
           className={styles["img"]}
           src="/img/key_range.png"
           alt="Bitcoin Private Key Range Calculator"
         />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
       </a>
 
       <InfoCard
@@ -58,10 +69,18 @@ const Project = () => {
         />
       )}
       <a
+        className={styles["img-container"]}
         href="https://github.com/filiphelikar/local-chatting-app"
         target="blank"
       >
         <img className={styles["img"]} src="/img/local_chat.png" alt="" />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
       </a>
       {isMobile && (
         <InfoCard
@@ -70,8 +89,19 @@ const Project = () => {
           Link={"https://github.com/filiphelikar/local-chatting-app"}
         />
       )}
-      <a href="https://filiphelikar.github.io/filiphelikar/" target="blank">
+      <a
+        className={styles["img-container"]}
+        href="https://filiphelikar.github.io/filiphelikar/"
+        target="blank"
+      >
         <img className={styles["img"]} src="/img/photo_page.png" alt="" />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
       </a>
       <InfoCard
         heading={"Photo by Filip"}
@@ -86,8 +116,19 @@ const Project = () => {
           Link={"https://github.com/filiphelikar/nova-stranca"}
         />
       )}
-      <a href="https://github.com/filiphelikar/nova-stranca" target="blank">
+      <a
+        className={styles["img-container"]}
+        href="https://github.com/filiphelikar/nova-stranca"
+        target="blank"
+      >
         <img className={styles["img"]} src="/img/portfolio_page.png" alt="" />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
       </a>
       {isMobile && (
         <InfoCard
