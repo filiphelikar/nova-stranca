@@ -14,7 +14,6 @@
     padding: 5px;
     margin: 10px 2%;
     font-size: 15px;
-    font-family: var(--font-mono);
     background-color: rgb(2, 2, 2);
     border: var(--main-border);
     border-radius: 5px;
@@ -27,7 +26,6 @@
     padding: 5px;
     margin: 10px 2%;
     font-size: 15px;
-    font-family: var(--font-mono);
     resize: none;
     overflow-y: auto;
     background-color: rgb(2, 2, 2);
