@@ -63,7 +63,7 @@ body {
 
 .main-background {
   padding-top: 50px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 65%, rgb(17, 0, 48) 100%);
+  background: black;
 }
 
 .main-content {
@@ -97,6 +97,13 @@ header {
 @media (max-width: 768px) {
   header {
     padding: 25px 10px;
+  }
+  .main-background {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 65%,
+      rgb(17, 0, 48) 100%
+    );
   }
 
   .main-content {

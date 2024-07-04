@@ -48,6 +48,27 @@
   padding: 100px;
 }
 
+.gradient {
+  position: absolute;
+  height: 50vh;
+  width: 100vw;
+  top: 76vh;
+  z-index: 4;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 19%,
+    rgba(12, 0, 36, 1) 55%,
+    rgba(11, 0, 36, 0) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .gradient {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .parallax {
     height: 80vh;

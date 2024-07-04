@@ -55,7 +55,7 @@
   animation: orbit 10s linear infinite;
   transition: transform 1s, opacity 1s;
   opacity: 0;
-  z-index: 0;
+  z-index: 100;
 }
 
 .img-container:hover .img-asteroid {

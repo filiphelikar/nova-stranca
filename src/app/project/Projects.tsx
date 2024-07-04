@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.css";
+import styles from "./Projects.module.css";
 import { useTextRender } from "../../utils/useTextRender";
 import { useSelector } from "react-redux";
 import { RootState } from "../_GlobalRedux/store";
