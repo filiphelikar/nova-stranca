@@ -1,100 +1,97 @@
 .ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    transition: transform 0.3s ease-in-out;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s ease-in-out;
 }
 
 .ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 6px 15px;
-    border-radius: 20px;
-    margin: 0 10px;
-    cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 .ul li a:hover {
-    background-color: var(--color-one);
-    -webkit-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
-    -moz-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
-    box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
+  background-color: var(--color-one);
+  -webkit-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
+  -moz-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
+  box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
 }
 
 .ul li button {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 6px 15px;
-    border-radius: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .ul li button:hover {
-    background-color: var(--color-one);
-    -webkit-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
-    -moz-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
-    box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
+  background-color: var(--color-one);
+  -webkit-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
+  -moz-box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
+  box-shadow: 0px 0px 28px 0px var(--shadow-color-one);
 }
 
 .cloasing {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
 }
 
 @media (max-width: 768px) {
+  .cloasing {
+    display: block;
+  }
 
-    .cloasing {
-        display: block;
-    }
+  .ul {
+    flex-direction: column;
+    background: rgba(76, 60, 100, 0.9);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    padding-top: 3.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: none;
+    position: fixed;
+  }
 
-    .ul {
-        flex-direction: column;
-        background: rgba(76, 60, 100, 0.9);
-        backdrop-filter: blur(2.5px);
-        -webkit-backdrop-filter: blur(2.5px);
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 200px;
-        padding-top: 3.5rem;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        display: none;
-        position: fixed;
-    }
+  .ul.open {
+    transform: translateX(0%);
+    display: block;
+  }
 
-    .ul.open {
-        transform: translateX(0%);
-        display: block;
-    }
+  .ul li {
+    margin-top: 30px;
+    color: #fff;
+  }
 
-    .ul li {
-        margin-top: 30px;
-        color: #fff;
-    }
+  .ul li a,
+  .ul li button {
+    color: rgb(0, 0, 0);
+  }
 
-    .ul li a, .ul li button {
-        color: rgb(0, 0, 0);
-    }
-
-    .ul li a:hover, .ul li button:hover {
-        background-color: rgb(255, 255, 255);
-        -webkit-box-shadow: 0px 0px 28px 0px white;
-        -moz-box-shadow: 0px 0px 28px 0px white;
-        box-shadow: 0px 0px 28px 0px white;
-    }
+  .ul li a:hover,
+  .ul li button:hover {
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 28px 0px white;
+    -moz-box-shadow: 0px 0px 28px 0px white;
+    box-shadow: 0px 0px 28px 0px white;
+  }
 }
-
-
-
-  

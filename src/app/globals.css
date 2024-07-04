@@ -1,24 +1,29 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: "Ubuntu", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-mono: "Ubuntu", ui-monospace, Menlo, Monaco, "Cascadia Mono",
+    "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+    "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-    --main-border: 1px solid #30363d;
+  --main-border: 1px solid #30363d;
 
-    --main-image-gradiend: linear-gradient(330deg, hsl(0deg 0% 0%) 60%, hsl(256deg 100% 8%) 99%, hsl(256deg 100% 11%) 100%);
-            /***** colors *****/
-    --color-one:rgb(76, 60, 100);
-    --shadow-color-one:rgba(76, 60, 100, 0.64);
+  --main-image-gradiend: linear-gradient(
+    330deg,
+    hsl(0deg 0% 0%) 60%,
+    hsl(256deg 100% 8%) 99%,
+    hsl(256deg 100% 11%) 100%
+  );
+  /***** colors *****/
+  --color-one: rgb(76, 60, 100);
+  --shadow-color-one: rgba(76, 60, 100, 0.64);
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  scrollbar-width: thin; 
-  scrollbar-color: #222222 transparent; 
+  scrollbar-width: thin;
+  scrollbar-color: #222222 transparent;
 }
 
 html,
@@ -34,31 +39,31 @@ body {
 }
 
 *::-webkit-scrollbar {
-    width: 5px; 
+  width: 5px;
 }
 
 *::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #222222;
-    border-radius: 2px;
-    min-height: 30%;
+  background-color: #222222;
+  border-radius: 2px;
+  min-height: 30%;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: #494949;
-    cursor: pointer;
+  background-color: #494949;
+  cursor: pointer;
 }
 
 * {
-    -ms-overflow-style: -ms-autohiding-scrollbar; 
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .main-background {
   padding-top: 50px;
-  background: linear-gradient(0deg, rgba(0,0,0,1) 65%, rgb(17, 0, 48) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 65%, rgb(17, 0, 48) 100%);
 }
 
 .main-content {
@@ -76,7 +81,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .logo {
@@ -99,4 +103,3 @@ header {
     padding: 10px 10px 0;
   }
 }
-
