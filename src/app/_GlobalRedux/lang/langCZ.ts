@@ -27,6 +27,8 @@ export default {
       "Tato malá single-page stránka slouží jako jednoduché portfolio pro prezentaci mých fotografií. Stránka má velmi jednoduchý design a je vytvořena pouze pomocí HTML, CSS a JavaScriptu, což ukazuje moje základní schopnosti v tvorbě webových stránek.",
     infoProject:
       "Toto je moje nová portfolio stránka, vytvořená pomocí Next.js. Stránka poskytuje přehled mých projektů, dovedností a kontaktů. Použití Next.js umožňuje rychlé načítání stránek a optimalizaci pro vyhledávače, což ukazuje moje schopnosti v moderním vývoji webových aplikací.",
+    infoNvidia:
+      "Desktopová aplikace vytvořená pomocí Electronu, Vite a Reactu pro zobrazování informací o grafické kartě. Backend aplikace pouze využívá příkaz nvidia-smi pro získání dat z konzole, která jsou následně zpracovávána a zobrazována na frontendu. Projekt spojuje moderní technologie pro monitorování hardwaru.",
   },
   home: {
     subheading: "Ahoj! Jmenuji se Filip",

@@ -24,6 +24,34 @@
   transition: transform 0.5s;
 }
 
+.img-before {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.img-after {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.img-before:hover {
+  opacity: 0;
+}
+
+.img-container:hover .img-before {
+  transform: scale(1.02);
+}
+
+.img-container:hover .img-after {
+  transform: scale(1.02);
+}
+
 .img-container:hover .img {
   transform: scale(1.02);
 }
@@ -65,6 +93,22 @@
 @media (max-width: 768px) {
   .img {
     position: static;
+  }
+
+  .img-before {
+    position: static;
+  }
+
+  .img-before:hover {
+    opacity: 1;
+  }
+
+  .img-after {
+    display: none;
+  }
+
+  .img-container:hover .img-before {
+    transform: scale(1);
   }
 
   .img-container:hover .img {

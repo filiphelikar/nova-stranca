@@ -27,6 +27,8 @@ export default {
       "This small single-page site serves as a simple portfolio for showcasing my photography. The site has a very basic design and is created using only HTML, CSS, and JavaScript, which demonstrates my foundational skills in web development.",
     infoProject:
       "This is my new portfolio website, created using Next.js. The site provides an overview of my projects, skills, and contact information. Using Next.js allows for fast page loading and search engine optimization, demonstrating my capabilities in modern web application development.",
+    infoNvidia:
+      "Desktop application created using Electron, Vite, and React for displaying information about the graphics card. The backend of the application only uses the nvidia-smi command to get data from the console, which is then processed and displayed on the frontend. The project combines modern technologies for hardware monitoring.",
   },
   home: {
     subheading: "Hi! My name is Filip",

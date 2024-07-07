@@ -137,6 +137,34 @@ const Project = () => {
           Link={"https://github.com/filiphelikar/nova-stranca"}
         />
       )}
+      <a
+        className={styles["img-container"]}
+        href="https://github.com/filiphelikar/nvidia-ui"
+        target="blank"
+      >
+        <img
+          className={styles["img-before"]}
+          src="/img/Nvidia_Desktop-before.png"
+          alt=""
+        />
+        <img
+          className={styles["img-after"]}
+          src="/img/Nvidia_Desktop-after.png"
+          alt=""
+        />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
+      </a>
+      <InfoCard
+        heading={"Nvidia Desktop"}
+        text={translations.Projects.infoNvidia}
+        Link={"https://github.com/filiphelikar/nvidia-ui"}
+      />
     </div>
   );
 };
