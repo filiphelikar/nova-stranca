@@ -164,6 +164,7 @@ const Project = () => {
         heading={"Nvidia Desktop"}
         text={translations.Projects.infoNvidia}
         Link={"https://github.com/filiphelikar/nvidia-ui"}
+        last={true}
       />
     </div>
   );

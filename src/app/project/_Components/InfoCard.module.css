@@ -13,11 +13,22 @@
   z-index: 101;
 }
 
-.info:nth-last-child(2) {
-  margin-bottom: 0;
+.last-info {
+  width: 100%;
+  padding: 20px 50px;
+  height: fit-content;
+  margin-top: 30px;
+  background: var(--main-image-gradiend);
+  border: var(--main-border);
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  color: white;
+  margin-bottom: 0px;
+  z-index: 101;
 }
 
-.info p {
+.info p, .last-info p {
   margin-top: 10px;
 }
 
