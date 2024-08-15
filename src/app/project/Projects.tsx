@@ -36,6 +36,38 @@ const Project = () => {
   return (
     <div className={styles["main"]}>
       <h2 ref={refHeading}>{heading}</h2>
+      {!isMobile && (
+        <InfoCard
+          heading={"Fullstack Animal Bazar"}
+          text={translations.Projects.infoAnimalBazar}
+          Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
+        />
+      )}
+      <a
+        className={styles["img-container"]}
+        href="https://github.com/filiphelikar/AnimalBazar-Fe/"
+        target="blank"
+      >
+        <img
+          className={styles["img"]}
+          src="/img/animal-bazar.png"
+          alt="Bitcoin Private Key Range Calculator"
+        />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
+      </a>
+      {isMobile && (
+        <InfoCard
+          heading={"Fullstack Animal Bazar"}
+          text={translations.Projects.infoAnimalBazar}
+          Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
+        />
+      )}
       <a
         className={styles["img-container"]}
         href="https://github.com/filiphelikar/privatekeyrange"

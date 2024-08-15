@@ -19,6 +19,8 @@ export default {
     messageRequired: "Message is required",
   },
   Projects: {
+    infoAnimalBazar:
+      "Animal Bazar is a full-stack web application designed for creating, editing, deleting, and searching advertisements for various animals. The backend is built using Nest.Js and MongoDB, ensuring a robust and scalable infrastructure. On the frontend, the application leverages Vite and React. Users can search for ads by animal type or browse all available listings, showcasing my expertise in modern web technologies and full-stack development.",
     infoCalc:
       "This project is a calculator for computing the range of private keys for a Bitcoin puzzle and also for calculating the speed of a brute-force attack. The application was created using HTML, CSS, JavaScript, and Svelte. The project demonstrates my skills in cryptography and creating user-friendly interfaces.",
     infoLocal:

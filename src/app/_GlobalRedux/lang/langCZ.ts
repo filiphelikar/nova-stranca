@@ -19,6 +19,8 @@ export default {
     messageRequired: "zpráva je poviná",
   },
   Projects: {
+    infoAnimalBazar:
+      "Animal Bazar je fullstack webová aplikace určená k vytváření, editaci, mazání a vyhledávání inzerátů na různé druhy zvířat. Backend je postaven na Nest.Js a MongoDB, což zajišťuje robustní a škálovatelnou infrastrukturu. Na frontendu aplikace využívá Vite a React. Uživatelé mohou vyhledávat inzeráty podle druhu zvířat nebo procházet všechny dostupné nabídky, což ukazuje mé dovednosti v moderních webových technologiích a fullstack vývoji.",
     infoCalc:
       "Tento projekt je kalkulačka pro výpočet rozsahu privátních klíčů pro bitcoin puzzle a také pro výpočet rychlosti brute force útoku. Aplikace byla vytvořena za použití HTML, CSS, JavaScriptu a Svelte. Projekt demonstruje moje schopnosti v oblasti kryptografie a tvorby uživatelsky přívětivých rozhraní.",
     infoLocal:
