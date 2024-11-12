@@ -8,6 +8,14 @@ export default {
   aboutMe: {
     subHeading: "Jsem začínající frontend developer",
     text: "zaměřený především na React a Next.js. Neustále se učím nové technologie a rád objevuji různé programátorské koncepty. Mým cílem je nejen vytvářet elegantní uživatelské rozhraní, ale také pochopit hlubší mechanizmy softwarového inženýrství. Mimo programování mě fascinuje technologie obecně. Dříve jsem se intenzivně zajímal o elektrikařinu, doma mám malý solární systém s fotovoltaickými panely na balkoně, což mě stále inspiruje k dalšímu zkoumání a experimentování.",
+    subHeadingSkills: "Moje skils:",
+    textSkills1: "- Frontend: React/Next, základy Angularu Vue",
+    textSkills2: "- Backend: Node/Nest, MongoDB, základy SQL",
+    textSkills3: "- Linux: bash, daemons, i use Arch BTW",
+    textSkills4: "- Netwoking: základy CCNA, subnetting,virtual hosts, TCP/UDP, OSI,",
+    textSkills5: "- Git/Github",
+    textSkills6: "- Docker/Docker-compose",
+    textSkills7: "- Ostatní: Typescript, REST API, Figma, 3D-Tisk",
   },
   contactForm: {
     textAreaLable: "Zpráva:",

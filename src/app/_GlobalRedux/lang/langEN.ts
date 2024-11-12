@@ -8,6 +8,15 @@ export default {
   aboutMe: {
     subHeading: "I am a beginner frontend developer",
     text: "focused primarily on React and Next.js. I am constantly learning new technologies and enjoy exploring different programming concepts. My goal is not only to create elegant user interfaces but also to understand the deeper mechanisms of software engineering. Beyond programming, I am fascinated by technology in general. I used to be intensely interested in electrical engineering and now I have a small solar system with photovoltaic panels on my balcony, which continues to inspire me for further exploration and experimentation.",
+    subHeadingSkills: "My Skills:",
+    textSkills1: "- Frontend: React/Next, basic knowledge of Angular and Vue",
+    textSkills2: "- Backend: Node/Nest, MongoDB, basics of SQL",
+    textSkills3: "- Linux: bash, daemons, I use Arch BTW",
+    textSkills4: "- Networking: basics of CCNA, subnetting, virtual hosts, TCP/UDP, OSI",
+    textSkills5: "- Git/Github",
+    textSkills6: "- Docker/Docker-compose",
+    textSkills7: "- Other: TypeScript, REST API, Figma, 3D Printing",
+    
   },
   contactForm: {
     textAreaLable: "Message:",

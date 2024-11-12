@@ -12,6 +12,12 @@
 
 .solar-img {
     width: 100%;
+    margin-bottom: 400px;
+}
+
+.networking-img {
+    width: 100%;
+    margin-bottom: 400px;
 }
 
 .message {
@@ -49,7 +55,6 @@
     border: var(--main-border);
     border-radius: 5px;
     padding: 20px;
-    margin-top: 400px;
 }
 
 .main div a {
@@ -76,6 +81,15 @@
 
     .main h2 {
         grid-column: span 1; 
+    }
+
+    .solar-img {
+        margin-bottom: 0;
+    }
+
+    .networking-img {
+        grid-row: 4; 
+        margin-bottom: 0;
     }
 
     .certifikat {
