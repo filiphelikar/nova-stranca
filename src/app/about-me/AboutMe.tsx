@@ -55,6 +55,10 @@ const AboutMe = () => {
     translations.aboutMe.textSkills7,
     28
   );
+  const [textWeChall, fullTextWeChall, reftextWeChall] = useTextRender(
+    "- WeChall: www.wechall.net/profile/filip_helikar",
+    30
+  );
 
   useEffect(() => {
     const elements: any[] = [
@@ -110,6 +114,7 @@ const AboutMe = () => {
           <p ref={reftextSkills5}>{textSkills5}</p>
           <p ref={reftextSkills6}>{textSkills6}</p>
           <p ref={reftextSkills7}>{textSkills7}</p>
+          <a target="blank" ref={reftextWeChall}>{textWeChall}</a>
         </div>
         <h3 className={styles["full"]}>{subHeadingSkils}</h3>
         <p className={styles["full"]}>{fullTextSkills1}</p>
@@ -119,6 +124,7 @@ const AboutMe = () => {
         <p className={styles["full"]}>{fullTextSkills5}</p>
         <p className={styles["full"]}>{fullTextSkills6}</p>
         <p className={styles["full"]}>{fullTextSkills7}</p>
+        <a href="https://www.wechall.net/profile/filip_helikar" target="blank" className={styles["full"]}>{fullTextWeChall}</a>
       </div>
       <img
         className={styles["networking-img"]}

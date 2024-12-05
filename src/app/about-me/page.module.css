@@ -50,6 +50,11 @@
     margin-top: 10px;
 }
 
+.message a {
+    display: block;
+    margin-top: 10px;
+}
+
 .certifikat {
     background: var(--main-image-gradiend) ;
     border: var(--main-border);

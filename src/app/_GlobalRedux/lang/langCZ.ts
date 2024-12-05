@@ -6,8 +6,8 @@ export default {
     contact: "Kontakt",
   },
   aboutMe: {
-    subHeading: "Jsem začínající frontend developer",
-    text: "zaměřený především na React a Next.js. Neustále se učím nové technologie a rád objevuji různé programátorské koncepty. Mým cílem je nejen vytvářet elegantní uživatelské rozhraní, ale také pochopit hlubší mechanizmy softwarového inženýrství. Mimo programování mě fascinuje technologie obecně. Dříve jsem se intenzivně zajímal o elektrikařinu, doma mám malý solární systém s fotovoltaickými panely na balkoně, což mě stále inspiruje k dalšímu zkoumání a experimentování.",
+    subHeading: "Jsem nadšenec do technologií a softwarového inženýrství",
+    text: "Mým cílem je porozumět hlouběji principům softwarového inženýrství. V poslední době se věnuji hlavně DevOps, Linuxu, networkingu a FE, ale stále mě baví objevovat nové technologie a koncepty. Fascinuje mě práce s infrastrukturou a její automatizace. Kromě programování mám velký zájem o technologie obecně – doma jsem si postavil malý solární systém s fotovoltaickými panely, což mě motivuje k dalším experimentům a zkoumání nových oblastí. Rád propojuji teoretické znalosti s praktickými projekty, které mě posouvají vpřed.",
     subHeadingSkills: "Moje skils:",
     textSkills1: "- Frontend: React/Next, základy Angularu Vue",
     textSkills2: "- Backend: Node/Nest, MongoDB, základy SQL",
@@ -41,7 +41,7 @@ export default {
       "Desktopová aplikace vytvořená pomocí Electronu, Vite a Reactu pro zobrazování informací o grafické kartě. Backend aplikace pouze využívá příkaz nvidia-smi pro získání dat z konzole, která jsou následně zpracovávána a zobrazována na frontendu. Projekt spojuje moderní technologie pro monitorování hardwaru.",
   },
   home: {
-    subheading: "Ahoj! Jmenuji se Filip",
-    text: "jsem nadšený front-end vývojář, který rád kombinuje kreativitu s technologií. Baví mě pracovat na inovativních projektech a neustále se učit nové dovednosti. Kromě programování jsem velkým fanouškem Bitcoinu a rád trávím volný čas pod palmami. Moje portfolio představuje výběr mých projektů, dovedností a zájmů. Prozkoumejte a podívejte se, na čem jsem pracoval!",
+    subheading: "Nezapoňte se podívat",
+    text: "na DevTools v Browseru > Network > Response Headers: X-Server, je tam velmi důležitá informace",
   },
 };

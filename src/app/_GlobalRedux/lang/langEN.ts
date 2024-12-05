@@ -6,8 +6,8 @@ export default {
     contact: "Contact",
   },
   aboutMe: {
-    subHeading: "I am a beginner frontend developer",
-    text: "focused primarily on React and Next.js. I am constantly learning new technologies and enjoy exploring different programming concepts. My goal is not only to create elegant user interfaces but also to understand the deeper mechanisms of software engineering. Beyond programming, I am fascinated by technology in general. I used to be intensely interested in electrical engineering and now I have a small solar system with photovoltaic panels on my balcony, which continues to inspire me for further exploration and experimentation.",
+    subHeading: "I am an enthusiast of technology and software engineering",
+    text: "My goal is to gain a deeper understanding of the principles of software engineering. Recently, I’ve been focusing mainly on DevOps, Linux, networking, and frontend development, but I still enjoy discovering new technologies and concepts. I’m fascinated by working with infrastructure and its automation. Beyond programming, I have a strong interest in technology in general – I built a small solar system with photovoltaic panels at home, which motivates me to continue experimenting and exploring new areas. I enjoy combining theoretical knowledge with practical projects that help me move forward.",
     subHeadingSkills: "My Skills:",
     textSkills1: "- Frontend: React/Next, basic knowledge of Angular and Vue",
     textSkills2: "- Backend: Node/Nest, MongoDB, basics of SQL",
@@ -42,7 +42,7 @@ export default {
       "Desktop application created using Electron, Vite, and React for displaying information about the graphics card. The backend of the application only uses the nvidia-smi command to get data from the console, which is then processed and displayed on the frontend. The project combines modern technologies for hardware monitoring.",
   },
   home: {
-    subheading: "Hi! My name is Filip",
-    text: "I'm a passionate front-end developer who loves combining creativity with technology. I enjoy working on innovative projects and continuously learning new skills. In addition to coding, I'm a big fan of Bitcoin and love spending my free time under palm trees. My portfolio showcases a selection of my projects, skills, and interests. Explore and see what I've been working on!",
-  },
+    subheading: "Don't forget to check",
+    text: "DevTools in the Browser > Network > Response Headers: X-Server, there is very important information there",
+  },  
 };
