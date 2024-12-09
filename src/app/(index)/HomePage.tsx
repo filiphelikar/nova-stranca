@@ -12,7 +12,7 @@ const HomePage = () => {
   const lang = useSelector((state: RootState) => state.language.lang);
   const translations = useSelector((state: RootState) => state.language.translations[lang as keyof (typeof state.language.translations)])
 
-  const [heading, _, refHeading] = useTextRender("Infrastructure:", 60);
+  const [heading, _, refHeading] = useTextRender("Architecture of this web app:", 60);
 
   const [subheading, fullSubheading, refSubheading] = useTextRender(
     translations.home.subheading,
