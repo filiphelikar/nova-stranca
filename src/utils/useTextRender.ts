@@ -1,5 +1,4 @@
-// useTextRender.ts
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export const useTextRender = (initialText: string, speed: number = 40): [string, string, (node?: Element | null | undefined) => void] => {

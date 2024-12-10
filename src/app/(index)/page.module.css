@@ -5,6 +5,10 @@
   margin-top: 400px;
 }
 
+.main h2 {
+  grid-column: span 2;
+}
+
 .containers {
   grid-column: span 2;
   height: fit-content;
@@ -85,7 +89,7 @@
   transform: translate(70%, -50% ); 
 }
 
-.info {
+.info, .info-filip {
   width: 100%;
   padding: 20px 50px;
   height: fit-content;
@@ -99,11 +103,15 @@
   margin-bottom: 400px;
 }
 
+.info-filip {
+  margin-top: 50%;
+}
+
 .info:nth-last-child(2) {
   margin-bottom: 0;
 }
 
-.info p {
+.info p, .info-filip p {
   margin-top: 10px;
 }
 
@@ -150,6 +158,16 @@
     margin-top: 0;
   }
 
+  .main h2 {
+    grid-column: span 1;
+  }
+
+  .avatar {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  
   .containers {
     grid-column: span 1;
   }
@@ -158,7 +176,12 @@
     width: 30vw;
   }
 
+  .info-filip {
+    margin: 0;
+  }
+
   .info {
     margin-bottom: 0;
   }
+
 }

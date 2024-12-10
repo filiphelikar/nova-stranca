@@ -12,7 +12,19 @@ const HomePage = () => {
   const lang = useSelector((state: RootState) => state.language.lang);
   const translations = useSelector((state: RootState) => state.language.translations[lang as keyof (typeof state.language.translations)])
 
-  const [heading, _, refHeading] = useTextRender("Architecture of this web app:", 60);
+  const [heading, _, refHeading] = useTextRender("Home:", 60);
+
+  const [dockersHeading, __, dockersRefHeading] = useTextRender("Architecture of this web app:", 60);
+
+  const [subheadingFilip, fullSubheadingFilip, refSubheadingFilip] = useTextRender(
+    translations.home.subheadingFilip,
+    60
+  );
+
+  const [infoFilip, fullInfoFilip, refInfoFilip] = useTextRender(
+    translations.home.textFilip,
+    10
+  );
 
   const [subheading, fullSubheading, refSubheading] = useTextRender(
     translations.home.subheading,
@@ -56,6 +68,18 @@ const HomePage = () => {
   return (
     <div className={styles["main"]}>
       <h2 ref={refHeading}>{heading}</h2>
+      <img className={styles["avatar"]} src="/img/avatar.png" alt="avatar image of me" />
+        <div className={styles["info-filip"]} >
+          <div className={styles["rendered-text"]}>
+            <h3 ref={refSubheadingFilip}>{subheadingFilip}</h3>
+            <p ref={refInfoFilip}>{infoFilip}</p>
+          </div>
+          <div className={styles["place-holder"]}>
+            <h3>{fullSubheadingFilip}</h3>
+            <p>{fullInfoFilip}</p>
+          </div>
+        </div>
+        <h2 ref={dockersRefHeading}>{dockersHeading}</h2>
       <div className={styles["containers"]}>
         <div className={styles["nginx-container"]}>
           <div>
