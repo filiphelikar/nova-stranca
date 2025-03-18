@@ -42,8 +42,6 @@ export default {
       "Desktop application created using Electron, Vite, and React for displaying information about the graphics card. The backend of the application only uses the nvidia-smi command to get data from the console, which is then processed and displayed on the frontend. The project combines modern technologies for hardware monitoring.",
   },
   home: {
-    subheading: "Don't forget to check",
-    text: "DevTools in the Browser > Network > Response Headers: X-Server, there is very important information there",
     subheadingFilip: "Hi! My name is Filip",
     textFilip: "I am an IT enthusiast. Come explore my web app with me. Here you will find: architecture of my app deployed on GCP, Projects: mostly FE related, About: a short paragraph about myself, a collection of my skills and certifications, Contact: a form with validation and contact information.",
   },  

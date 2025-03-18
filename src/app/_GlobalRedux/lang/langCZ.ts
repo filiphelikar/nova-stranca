@@ -41,8 +41,6 @@ export default {
       "Desktopová aplikace vytvořená pomocí Electronu, Vite a Reactu pro zobrazování informací o grafické kartě. Backend aplikace pouze využívá příkaz nvidia-smi pro získání dat z konzole, která jsou následně zpracovávána a zobrazována na frontendu. Projekt spojuje moderní technologie pro monitorování hardwaru.",
   },
   home: {
-    subheading: "Nezapoňte se podívat",
-    text: "na DevTools v Browseru > Network > Response Headers: X-Server, je tam velmi důležitá informace",
     subheadingFilip: "Ahoj! jmenuji se Filip",
     textFilip: "jsem nadšenec do IT pojďte se mnou prozkoumat mou webovou aplikaci najdete zde: architekturu mé aplikace nasazené na GCP, Projekty: převážně FE, O mně: krátký odstavec o mně, soubor mých skils a certifikáty, Kontakt: formulař s validací a kontaktní informace"
   },

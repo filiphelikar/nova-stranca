@@ -1,0 +1,144 @@
+.container-htb {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.main-htb h2 {
+    min-height: 29px;
+    margin-top: 400px;
+    margin-bottom: 35px;
+}
+
+.card,
+.streak-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #1a2332;
+    background-clip: border-box;
+    border: 0 solid #1a2332;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.card,
+.streak-card {
+    margin-bottom: 24px;
+    box-shadow: 0 .75rem 1.5rem #12263f08;
+}
+
+.card img {
+    border-radius: 4px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    vertical-align: middle;
+    max-width: 450px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+
+.text-success {
+    color: #9fef00 !important;
+}
+
+.badge-soft-success {
+    color: #9fef00;
+    background-color: #9fef002e;
+}
+
+.badge-soft-warning {
+    color: #ffaf00;
+    background-color: #ffaf002e;
+}
+
+.font-size-12 {
+    font-size: 12px !important;
+}
+
+.badge,
+.custom-badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.card p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.card-footer,
+.custom-card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #1a2332;
+    border-top: 0 solid #1a2332;
+    border-radius: 4px;
+}
+
+.card .d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1080px) {
+    .container-htb {
+        grid-gap: 20px;
+        margin-top: 100px;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .card img {
+        border-radius: 4px;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+        vertical-align: middle;
+        max-width: 300px;
+    }
+
+    .main-htb h2 {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container-htb {
+        grid-gap: 20px;
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .card img {
+        border-radius: 4px;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+        vertical-align: middle;
+        max-width: 300px;
+    }
+}

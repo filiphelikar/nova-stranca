@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useTextRender } from "../../utils/useTextRender";
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../app/_GlobalRedux/store';
+import HTBModules from "@/components/HTBModules/HTBModules";
 
 const HomePage = () => {
 
@@ -26,16 +27,6 @@ const HomePage = () => {
     10
   );
 
-  const [subheading, fullSubheading, refSubheading] = useTextRender(
-    translations.home.subheading,
-    60
-  );
-
-  const [info, fullInfo, refInfo] = useTextRender(
-    translations.home.text,
-    10
-  );
-
   const { ref, inView, entry } = useInView({
     triggerOnce: false,
     threshold: 0.5,
@@ -49,7 +40,7 @@ const HomePage = () => {
         const isCentered = rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
 
         if (isCentered) {
-          gsap.to("#aiImg", { duration: 0.5, filter: `blur(0px)`});
+          gsap.to("#aiImg", { duration: 0.5, filter: `blur(0px)` });
         } else {
           const value = window.scrollY;
           gsap.to("#aiImg", { duration: 0.5, filter: `blur(${value * 0.002}px)` });
@@ -58,7 +49,7 @@ const HomePage = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -66,9 +57,10 @@ const HomePage = () => {
   }, [entry]);
 
   return (
-    <div className={styles["main"]}>
-      <h2 ref={refHeading}>{heading}</h2>
-      <img className={styles["avatar"]} src="/img/avatar.png" alt="avatar image of me" />
+    <div>
+      <div className={styles["main"]}>
+        <h2 ref={refHeading}>{heading}</h2>
+        <img className={styles["avatar"]} src="/img/avatar.png" alt="avatar image of me" />
         <div className={styles["info-filip"]} >
           <div className={styles["rendered-text"]}>
             <h3 ref={refSubheadingFilip}>{subheadingFilip}</h3>
@@ -80,64 +72,56 @@ const HomePage = () => {
           </div>
         </div>
         <h2 ref={dockersRefHeading}>{dockersHeading}</h2>
-      <div className={styles["containers"]}>
-        <div className={styles["nginx-container"]}>
-          <div>
-            <a target="blank" href="https://github.com/filiphelikar/nginx-container/blob/main/Dockerfile" className={styles["a"]}>
-              <div className={styles["background-container"]}>
-              <img src="/img/docker-nginx.png" alt="docker-nginx-arch" width="200px" className={styles["nginx"]} />
-              </div>
-              <div className={styles["container-info"]}>
+        <div className={styles["containers"]}>
+          <div className={styles["nginx-container"]}>
+            <div>
+              <a target="blank" href="https://github.com/filiphelikar/nginx-container/blob/main/Dockerfile" className={styles["a"]}>
+                <div className={styles["background-container"]}>
+                  <img src="/img/docker-nginx.png" alt="docker-nginx-arch" width="200px" className={styles["nginx"]} />
+                </div>
+                <div className={styles["container-info"]}>
                   <h3>Nginx</h3>
                   <p>Docker container with reverse proxy nginx</p>
                   <p>and archlinux image</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className={styles["next-containers"]}>
+            <a target="blank" href="https://github.com/filiphelikar/nova-stranca/blob/main/Dockerfile" style={{ position: "relative" }}>
+              <div className={styles["background-container"]}>
+                <img src="/img/docker-nextjs.png" alt="docker-nginx-arch" width="200px" className={styles["img"]} />
+              </div>
+              <div className={styles["container-info-next"]}>
+                <h3>Next</h3>
+                <p>Docker container with next app</p>
+                <p>and archlinux image</p>
+              </div>
+            </a>
+            <a target="blank" href="https://github.com/filiphelikar/nova-stranca/blob/main/Dockerfile" style={{ position: "relative" }}>
+              <div className={styles["background-container"]}>
+                <img src="/img/docker-nextjs.png" alt="docker-nginx-arch" width="200px" className={styles["img"]} />
+              </div>
+              <div className={styles["container-info-next"]}>
+                <h3>Next</h3>
+                <p>Docker container with next app</p>
+                <p>and archlinux image</p>
+              </div>
+            </a>
+            <a target="blank" href="https://github.com/filiphelikar/nova-stranca/blob/main/Dockerfile" style={{ position: "relative" }}>
+              <div className={styles["background-container"]}>
+                <img src="/img/docker-nextjs.png" alt="docker-nginx-arch" width="200px" className={styles["img"]} />
+              </div>
+              <div className={styles["container-info-next"]}>
+                <h3>Next</h3>
+                <p>Docker container with next app</p>
+                <p>and archlinux image</p>
               </div>
             </a>
           </div>
         </div>
-        <div className={styles["next-containers"]}>
-          <a target="blank" href="https://github.com/filiphelikar/nova-stranca/blob/main/Dockerfile" style={{position: "relative"}}>
-            <div className={styles["background-container"]}>
-              <img src="/img/docker-nextjs.png" alt="docker-nginx-arch" width="200px" className={styles["img"]} />
-            </div>
-            <div className={styles["container-info-next"]}>
-                  <h3>Next</h3>
-                  <p>Docker container with next app</p>
-                  <p>and archlinux image</p>
-              </div>
-          </a>
-          <a target="blank" href="https://github.com/filiphelikar/nova-stranca/blob/main/Dockerfile" style={{position: "relative"}}>
-            <div className={styles["background-container"]}>
-              <img src="/img/docker-nextjs.png" alt="docker-nginx-arch" width="200px" className={styles["img"]} />
-            </div>
-            <div className={styles["container-info-next"]}>
-                  <h3>Next</h3>
-                  <p>Docker container with next app</p>
-                  <p>and archlinux image</p>
-              </div>
-          </a>
-          <a target="blank" href="https://github.com/filiphelikar/nova-stranca/blob/main/Dockerfile" style={{position: "relative"}}>
-            <div className={styles["background-container"]}>
-              <img src="/img/docker-nextjs.png" alt="docker-nginx-arch" width="200px" className={styles["img"]} />
-            </div>
-            <div className={styles["container-info-next"]}>
-                  <h3>Next</h3>
-                  <p>Docker container with next app</p>
-                  <p>and archlinux image</p>
-              </div>
-          </a>
-        </div>
       </div>
-      <div className={styles["info"]}>
-        <div className={styles["rendered-text"]}>
-          <h3 ref={refSubheading}>{subheading}</h3>
-          <p ref={refInfo}>{info}</p>
-        </div>
-        <div className={styles["place-holder"]}>
-          <h3>{fullSubheading}</h3>
-          <p>{fullInfo}</p>
-        </div>
-      </div>
+      <HTBModules />
     </div>
   );
 };

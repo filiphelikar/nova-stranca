@@ -4,7 +4,7 @@ import { useTextRender } from "../../utils/useTextRender"
 
 const Footer = () => {
 
-  const [text, fullText, ref] = useTextRender("© 2024 Filip Helikar")
+  const [text, fullText, ref] = useTextRender("© 2025 Filip Helikar")
   
 
   return (

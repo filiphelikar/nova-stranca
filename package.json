@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
+    "cheerio": "^1.0.0",
     "dat.gui": "^0.7.9",
     "gsap": "^3.12.5",
     "next": "^14.2.17",
