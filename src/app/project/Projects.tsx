@@ -36,6 +36,29 @@ const Project = () => {
   return (
     <div className={styles["main"]}>
       <h2 ref={refHeading}>{heading}</h2>
+      <a
+        className={styles["img-container"]}
+        href="https://blog.filiphelikar.cz/"
+        target="blank"
+      >
+        <img
+          className={styles["img"]}
+          src="/img/blog.png"
+          alt="Bitcoin Private Key Range Calculator"
+        />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
+      </a>
+      <InfoCard
+          heading={"Blog"}
+          text={translations.Projects.infoBlog}
+          Link={"https://github.com/filiphelikar/my-blog"}
+        />
       {!isMobile && (
         <InfoCard
           heading={"Fullstack Animal Bazar"}

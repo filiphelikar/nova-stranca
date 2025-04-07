@@ -27,6 +27,7 @@ export default {
     messageRequired: "zpráva je poviná",
   },
   Projects: {
+    infoBlog: 'Blog je komunitně řízené místo, kde může každý sdílet své myšlenky, nápady nebo příběhy. Příspěvky jsou psány v jednoduchém formátu a po ručním schválení se zveřejňují. Projekt spravuji ručně a cílem je vytvořit prostor pro sdílení bez zbytečných překážek. Formátování je záměrně minimalistické, aby byl celý proces co nejpřístupnější. Najdeš zde texty nejen ode mě, ale i od dalších nadšenců, kteří chtějí přispět svými postřehy nebo zkušenostmi.',
     infoAnimalBazar:
       "Animal Bazar je fullstack webová aplikace určená k vytváření, editaci, mazání a vyhledávání inzerátů na různé druhy zvířat. Backend je postaven na Nest.Js a MongoDB, což zajišťuje robustní a škálovatelnou infrastrukturu. Na frontendu aplikace využívá Vite a React. Uživatelé mohou vyhledávat inzeráty podle druhu zvířat nebo procházet všechny dostupné nabídky, což ukazuje mé dovednosti v moderních webových technologiích a fullstack vývoji.",
     infoCalc:

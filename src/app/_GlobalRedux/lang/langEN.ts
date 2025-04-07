@@ -28,6 +28,7 @@ export default {
     messageRequired: "Message is required",
   },
   Projects: {
+    infoBlog: 'The blog is a community-driven space where anyone can share their thoughts, ideas, or stories. Posts are written using a simple formatting style and manually reviewed before being published. I maintain the project myself with the goal of keeping the process as open and accessible as possible. The formatting is intentionally minimal to make contributing easy for everyone. You’ll find posts not only from me but also from others who want to share their insights or experiences.',
     infoAnimalBazar:
       "Animal Bazar is a full-stack web application designed for creating, editing, deleting, and searching advertisements for various animals. The backend is built using Nest.Js and MongoDB, ensuring a robust and scalable infrastructure. On the frontend, the application leverages Vite and React. Users can search for ads by animal type or browse all available listings, showcasing my expertise in modern web technologies and full-stack development.",
     infoCalc:
