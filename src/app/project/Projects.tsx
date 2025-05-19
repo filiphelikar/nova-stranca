@@ -11,7 +11,7 @@ const Project = () => {
   const translations = useSelector(
     (state: RootState) =>
       state.language.translations[
-        lang as keyof typeof state.language.translations
+      lang as keyof typeof state.language.translations
       ]
   );
 
@@ -55,15 +55,17 @@ const Project = () => {
         </div>
       </a>
       <InfoCard
-          heading={"Blog"}
-          text={translations.Projects.infoBlog}
-          Link={"https://github.com/filiphelikar/my-blog"}
-        />
+        heading={"Blog"}
+        text={translations.Projects.infoBlog}
+        Link={"https://github.com/filiphelikar/my-blog"}
+        technologies={["next", "react", "html", "tailwind"]}
+      />
       {!isMobile && (
         <InfoCard
           heading={"Fullstack Animal Bazar"}
           text={translations.Projects.infoAnimalBazar}
           Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
+          technologies={["react", "html", "css"]}
         />
       )}
       <a
@@ -89,6 +91,7 @@ const Project = () => {
           heading={"Fullstack Animal Bazar"}
           text={translations.Projects.infoAnimalBazar}
           Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
+          technologies={["react", "html", "css"]}
         />
       )}
       <a
@@ -114,6 +117,7 @@ const Project = () => {
         heading={"Bitcoin Private Key Range Calculator"}
         text={translations.Projects.infoCalc}
         Link={"https://github.com/filiphelikar/privatekeyrange"}
+        technologies={["svelte", "html", "css"]}
       />
 
       {!isMobile && (
@@ -121,6 +125,7 @@ const Project = () => {
           heading={"Local Chat"}
           text={translations.Projects.infoLocal}
           Link={"https://github.com/filiphelikar/local-chatting-app"}
+          technologies={["react", "firebase", "html", "css"]}
         />
       )}
       <a
@@ -142,6 +147,7 @@ const Project = () => {
           heading={"Local Chat"}
           text={translations.Projects.infoLocal}
           Link={"https://github.com/filiphelikar/local-chatting-app"}
+          technologies={["react", "firebase", "html", "css"]}
         />
       )}
       <a
@@ -162,6 +168,7 @@ const Project = () => {
         heading={"Photo by Filip"}
         text={translations.Projects.infoPhoto}
         Link={"https://filiphelikar.github.io/filiphelikar/"}
+        technologies={["html", "css"]}
       />
 
       {!isMobile && (
@@ -169,6 +176,7 @@ const Project = () => {
           heading={"Portfolio Page"}
           text={translations.Projects.infoProject}
           Link={"https://github.com/filiphelikar/nova-stranca"}
+          technologies={["next", "react", "html", "css"]}
         />
       )}
       <a
@@ -190,6 +198,7 @@ const Project = () => {
           heading={"Portfolio Page"}
           text={translations.Projects.infoProject}
           Link={"https://github.com/filiphelikar/nova-stranca"}
+          technologies={["next", "react", "html", "css"]}
         />
       )}
       <a
@@ -219,6 +228,7 @@ const Project = () => {
         heading={"Nvidia Desktop"}
         text={translations.Projects.infoNvidia}
         Link={"https://github.com/filiphelikar/nvidia-ui"}
+        technologies={["electron", "react", "html", "css"]}
         last={true}
       />
     </div>

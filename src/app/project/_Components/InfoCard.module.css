@@ -28,7 +28,8 @@
   z-index: 101;
 }
 
-.info p, .last-info p {
+.info p,
+.last-info p {
   margin-top: 10px;
 }
 
@@ -45,6 +46,19 @@
 
 .place-holder {
   opacity: 0;
+}
+
+.icons {
+  width: fit-content;
+  height: fit-content;
+  float: right;
+}
+
+.icon {
+  width: fit-content;
+  display: inline-block;
+  margin: 3px;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
