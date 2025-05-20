@@ -40,7 +40,9 @@ export default {
       "Toto je moje nová portfolio stránka, vytvořená pomocí Next.js. Stránka poskytuje přehled mých projektů, dovedností a kontaktů. Použití Next.js umožňuje rychlé načítání stránek a optimalizaci pro vyhledávače, což ukazuje moje schopnosti v moderním vývoji webových aplikací.",
     infoNvidia:
       "Desktopová aplikace vytvořená pomocí Electronu, Vite a Reactu pro zobrazování informací o grafické kartě. Backend aplikace pouze využívá příkaz nvidia-smi pro získání dat z konzole, která jsou následně zpracovávána a zobrazována na frontendu. Projekt spojuje moderní technologie pro monitorování hardwaru.",
-  },
+    infoStreaks: 
+      "streaksApp je jednoduchá progresivní webová aplikace (PWA) vytvořená v Angularu, která slouží ke sledování každodenních aktivit a udržování streaků. Umožňuje přidávat aktivity, nastavit jejich frekvenci a funguje i offline díky podpoře PWA.",
+    },
   home: {
     subheadingFilip: "Ahoj! jmenuji se Filip",
     textFilip: "jsem nadšenec do IT pojďte se mnou prozkoumat mou webovou aplikaci najdete zde: architekturu mé aplikace nasazené na GCP, Projekty: převážně FE, O mně: krátký odstavec o mně, soubor mých skils a certifikáty, Kontakt: formulař s validací a kontaktní informace"

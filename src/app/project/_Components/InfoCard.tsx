@@ -11,8 +11,12 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
+import { IoLogoPwa } from "react-icons/io5";
+import { SiTypescript } from "react-icons/si";
+import { FaJs } from "react-icons/fa";
 
-type Technologies = "angular" | "react" | "next" | "svelte" | "electron" | "html" | "css" | "tailwind" | "firebase"
+
+type Technologies = "angular" | "react" | "next" | "svelte" | "electron" | "html" | "css" | "tailwind" | "firebase" | "pwa" | "ts" | "js"
 
 interface Props {
   heading: string,
@@ -34,6 +38,9 @@ const InfoCard = ({ heading, text, Link, last = false, technologies }: Props) =>
   css: <FaCss3 />,
   tailwind: <RiTailwindCssFill />,
   firebase: <IoLogoFirebase />,
+  pwa: <IoLogoPwa />,
+  ts: <SiTypescript />,
+  js: <FaJs />,
 };
 
 

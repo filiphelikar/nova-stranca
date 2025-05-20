@@ -36,6 +36,36 @@ const Project = () => {
   return (
     <div className={styles["main"]}>
       <h2 ref={refHeading}>{heading}</h2>
+      {!isMobile && <InfoCard
+        heading={"Streaks-app"}
+        text={translations.Projects.infoStreaks}
+        Link={"https://github.com/filiphelikar/streaks-app"}
+        technologies={["angular", "pwa", "ts", "html", "tailwind"]}
+      />}
+      <a
+        className={styles["img-container"]}
+        href="https://streaks-app-lake.vercel.app/"
+        target="blank"
+      >
+        <img
+          className={styles["img"]}
+          src="/img/streaks-app.png"
+          alt="streaks app"
+        />
+        <div className="orbit-container">
+          <img
+            className={styles["img-asteroid"]}
+            src="/img/asteroid.png"
+            alt=""
+          />
+        </div>
+      </a>
+      {isMobile && <InfoCard
+        heading={"Streaks-app"}
+        text={translations.Projects.infoStreaks}
+        Link={"https://github.com/filiphelikar/streaks-app"}
+        technologies={["angular", "pwa", "ts", "html", "tailwind"]}
+      />}
       <a
         className={styles["img-container"]}
         href="https://blog.filiphelikar.cz/"
@@ -58,14 +88,14 @@ const Project = () => {
         heading={"Blog"}
         text={translations.Projects.infoBlog}
         Link={"https://github.com/filiphelikar/my-blog"}
-        technologies={["next", "react", "html", "tailwind"]}
+        technologies={["next", "react", "ts", "html", "tailwind"]}
       />
       {!isMobile && (
         <InfoCard
           heading={"Fullstack Animal Bazar"}
           text={translations.Projects.infoAnimalBazar}
           Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
-          technologies={["react", "html", "css"]}
+          technologies={["react", "ts", "html", "css"]}
         />
       )}
       <a
@@ -91,7 +121,7 @@ const Project = () => {
           heading={"Fullstack Animal Bazar"}
           text={translations.Projects.infoAnimalBazar}
           Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
-          technologies={["react", "html", "css"]}
+          technologies={["react", "ts", "html", "css"]}
         />
       )}
       <a
@@ -112,12 +142,11 @@ const Project = () => {
           />
         </div>
       </a>
-
       <InfoCard
         heading={"Bitcoin Private Key Range Calculator"}
         text={translations.Projects.infoCalc}
         Link={"https://github.com/filiphelikar/privatekeyrange"}
-        technologies={["svelte", "html", "css"]}
+        technologies={["svelte", "js", "html", "css"]}
       />
 
       {!isMobile && (
@@ -125,7 +154,7 @@ const Project = () => {
           heading={"Local Chat"}
           text={translations.Projects.infoLocal}
           Link={"https://github.com/filiphelikar/local-chatting-app"}
-          technologies={["react", "firebase", "html", "css"]}
+          technologies={["react", "ts", "firebase", "html", "css"]}
         />
       )}
       <a
@@ -147,7 +176,7 @@ const Project = () => {
           heading={"Local Chat"}
           text={translations.Projects.infoLocal}
           Link={"https://github.com/filiphelikar/local-chatting-app"}
-          technologies={["react", "firebase", "html", "css"]}
+          technologies={["react", "ts", "firebase", "html", "css"]}
         />
       )}
       <a
@@ -168,7 +197,7 @@ const Project = () => {
         heading={"Photo by Filip"}
         text={translations.Projects.infoPhoto}
         Link={"https://filiphelikar.github.io/filiphelikar/"}
-        technologies={["html", "css"]}
+        technologies={["js", "html", "css"]}
       />
 
       {!isMobile && (
@@ -176,7 +205,7 @@ const Project = () => {
           heading={"Portfolio Page"}
           text={translations.Projects.infoProject}
           Link={"https://github.com/filiphelikar/nova-stranca"}
-          technologies={["next", "react", "html", "css"]}
+          technologies={["next", "react", "ts", "html", "css"]}
         />
       )}
       <a
@@ -198,7 +227,7 @@ const Project = () => {
           heading={"Portfolio Page"}
           text={translations.Projects.infoProject}
           Link={"https://github.com/filiphelikar/nova-stranca"}
-          technologies={["next", "react", "html", "css"]}
+          technologies={["next", "react", "ts", "html", "css"]}
         />
       )}
       <a
@@ -228,7 +257,7 @@ const Project = () => {
         heading={"Nvidia Desktop"}
         text={translations.Projects.infoNvidia}
         Link={"https://github.com/filiphelikar/nvidia-ui"}
-        technologies={["electron", "react", "html", "css"]}
+        technologies={["electron", "react", "ts", "html", "css"]}
         last={true}
       />
     </div>
