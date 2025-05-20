@@ -1,4 +1,4 @@
-export default {
+const translations = {
   nav: {
     home: "Home",
     about: "About",
@@ -41,7 +41,7 @@ export default {
       "This is my new portfolio website, created using Next.js. The site provides an overview of my projects, skills, and contact information. Using Next.js allows for fast page loading and search engine optimization, demonstrating my capabilities in modern web application development.",
     infoNvidia:
       "Desktop application created using Electron, Vite, and React for displaying information about the graphics card. The backend of the application only uses the nvidia-smi command to get data from the console, which is then processed and displayed on the frontend. The project combines modern technologies for hardware monitoring.",
-    infoStreaks: 
+    infoStreaks:
       "streaksApp is a simple Progressive Web App (PWA) built with Angular for tracking daily habits and maintaining your streaks. It lets you add activities, set their frequency, and works offline thanks to PWA support.",
   },
   home: {
@@ -49,3 +49,5 @@ export default {
     textFilip: "I am an IT enthusiast. Come explore my web app with me. Here you will find: architecture of my app deployed on GCP, Projects: mostly FE related, About: a short paragraph about myself, a collection of my skills and certifications, Contact: a form with validation and contact information.",
   },
 };
+
+export default translations

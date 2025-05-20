@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { JSX } from "react";
 import styles from "./InfoCard.module.css";
 import { useTextRender } from "../../../utils/useTextRender";
 import { SiAngular } from "react-icons/si";
@@ -14,9 +14,7 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { IoLogoPwa } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
 import { FaJs } from "react-icons/fa";
-
-
-type Technologies = "angular" | "react" | "next" | "svelte" | "electron" | "html" | "css" | "tailwind" | "firebase" | "pwa" | "ts" | "js"
+import { Technologies } from "../projectsData";
 
 interface Props {
   heading: string,
@@ -29,21 +27,19 @@ interface Props {
 const InfoCard = ({ heading, text, Link, last = false, technologies }: Props) => {
 
   const technologyIcons: Record<Technologies, JSX.Element> = {
-  angular: <SiAngular />,
-  react: <FaReact />,
-  next: <SiNextdotjs />,
-  svelte: <RiSvelteFill />,
-  electron: <IoLogoElectron />,
-  html: <FaHtml5 />,
-  css: <FaCss3 />,
-  tailwind: <RiTailwindCssFill />,
-  firebase: <IoLogoFirebase />,
-  pwa: <IoLogoPwa />,
-  ts: <SiTypescript />,
-  js: <FaJs />,
-};
-
-
+    angular: <SiAngular />,
+    react: <FaReact />,
+    next: <SiNextdotjs />,
+    svelte: <RiSvelteFill />,
+    electron: <IoLogoElectron />,
+    html: <FaHtml5 />,
+    css: <FaCss3 />,
+    tailwind: <RiTailwindCssFill />,
+    firebase: <IoLogoFirebase />,
+    pwa: <IoLogoPwa />,
+    ts: <SiTypescript />,
+    js: <FaJs />,
+  };
 
   const [subheading, fullSubheading, refSubheading] = useTextRender(
     heading,
@@ -65,15 +61,15 @@ const InfoCard = ({ heading, text, Link, last = false, technologies }: Props) =>
         <p>{fullText}</p>
       </div>
       <br />
-     {technologies && (
-  <div className={styles["icons"]}>
-    {technologies.map((technology, index) => (
-      <div className={styles["icon"]} key={index}>
-        {technologyIcons[technology]}
-      </div>
-    ))}
-  </div>
-)}
+      {technologies && (
+        <div className={styles["icons"]}>
+          {technologies.map((technology, index) => (
+            <div className={styles["icon"]} key={index}>
+              {technologyIcons[technology]}
+            </div>
+          ))}
+        </div>
+      )}
 
     </a>
   );

@@ -5,6 +5,8 @@ import { useTextRender } from "../../utils/useTextRender";
 import { useSelector } from "react-redux";
 import { RootState } from "../_GlobalRedux/store";
 import InfoCard from "./_Components/InfoCard";
+import Image from "next/image";
+import { projects } from "./projectsData";
 
 const Project = () => {
   const lang = useSelector((state: RootState) => state.language.lang);
@@ -36,232 +38,97 @@ const Project = () => {
   return (
     <div className={styles["main"]}>
       <h2 ref={refHeading}>{heading}</h2>
-      {!isMobile && <InfoCard
-        heading={"Streaks-app"}
-        text={translations.Projects.infoStreaks}
-        Link={"https://github.com/filiphelikar/streaks-app"}
-        technologies={["angular", "pwa", "ts", "html", "tailwind"]}
-      />}
-      <a
-        className={styles["img-container"]}
-        href="https://streaks-app-lake.vercel.app/"
-        target="blank"
-      >
-        <img
-          className={styles["img"]}
-          src="/img/streaks-app.png"
-          alt="streaks app"
-        />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
-          />
-        </div>
-      </a>
-      {isMobile && <InfoCard
-        heading={"Streaks-app"}
-        text={translations.Projects.infoStreaks}
-        Link={"https://github.com/filiphelikar/streaks-app"}
-        technologies={["angular", "pwa", "ts", "html", "tailwind"]}
-      />}
-      <a
-        className={styles["img-container"]}
-        href="https://blog.filiphelikar.cz/"
-        target="blank"
-      >
-        <img
-          className={styles["img"]}
-          src="/img/blog.png"
-          alt="Bitcoin Private Key Range Calculator"
-        />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
-          />
-        </div>
-      </a>
-      <InfoCard
-        heading={"Blog"}
-        text={translations.Projects.infoBlog}
-        Link={"https://github.com/filiphelikar/my-blog"}
-        technologies={["next", "react", "ts", "html", "tailwind"]}
-      />
-      {!isMobile && (
-        <InfoCard
-          heading={"Fullstack Animal Bazar"}
-          text={translations.Projects.infoAnimalBazar}
-          Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
-          technologies={["react", "ts", "html", "css"]}
-        />
-      )}
-      <a
-        className={styles["img-container"]}
-        href="https://github.com/filiphelikar/AnimalBazar-Fe/"
-        target="blank"
-      >
-        <img
-          className={styles["img"]}
-          src="/img/animal-bazar.png"
-          alt="Bitcoin Private Key Range Calculator"
-        />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
-          />
-        </div>
-      </a>
-      {isMobile && (
-        <InfoCard
-          heading={"Fullstack Animal Bazar"}
-          text={translations.Projects.infoAnimalBazar}
-          Link={"https://github.com/filiphelikar/AnimalBazar-Be/"}
-          technologies={["react", "ts", "html", "css"]}
-        />
-      )}
-      <a
-        className={styles["img-container"]}
-        href="https://github.com/filiphelikar/privatekeyrange"
-        target="blank"
-      >
-        <img
-          className={styles["img"]}
-          src="/img/key_range.png"
-          alt="Bitcoin Private Key Range Calculator"
-        />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
-          />
-        </div>
-      </a>
-      <InfoCard
-        heading={"Bitcoin Private Key Range Calculator"}
-        text={translations.Projects.infoCalc}
-        Link={"https://github.com/filiphelikar/privatekeyrange"}
-        technologies={["svelte", "js", "html", "css"]}
-      />
+      {projects.map((proj, index) => {
+        const info = translations.Projects[proj.textKey as keyof typeof translations.Projects];
 
-      {!isMobile && (
-        <InfoCard
-          heading={"Local Chat"}
-          text={translations.Projects.infoLocal}
-          Link={"https://github.com/filiphelikar/local-chatting-app"}
-          technologies={["react", "ts", "firebase", "html", "css"]}
-        />
-      )}
-      <a
-        className={styles["img-container"]}
-        href="https://github.com/filiphelikar/local-chatting-app"
-        target="blank"
-      >
-        <img className={styles["img"]} src="/img/local_chat.png" alt="" />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
+        const card = (
+          <InfoCard
+            heading={proj.title}
+            text={info}
+            Link={proj.github}
+            technologies={proj.tech}
+            last={index === projects.length - 1}
           />
-        </div>
-      </a>
-      {isMobile && (
-        <InfoCard
-          heading={"Local Chat"}
-          text={translations.Projects.infoLocal}
-          Link={"https://github.com/filiphelikar/local-chatting-app"}
-          technologies={["react", "ts", "firebase", "html", "css"]}
-        />
-      )}
-      <a
-        className={styles["img-container"]}
-        href="https://filiphelikar.github.io/filiphelikar/"
-        target="blank"
-      >
-        <img className={styles["img"]} src="/img/photo_page.png" alt="" />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
-          />
-        </div>
-      </a>
-      <InfoCard
-        heading={"Photo by Filip"}
-        text={translations.Projects.infoPhoto}
-        Link={"https://filiphelikar.github.io/filiphelikar/"}
-        technologies={["js", "html", "css"]}
-      />
+        );
 
-      {!isMobile && (
-        <InfoCard
-          heading={"Portfolio Page"}
-          text={translations.Projects.infoProject}
-          Link={"https://github.com/filiphelikar/nova-stranca"}
-          technologies={["next", "react", "ts", "html", "css"]}
-        />
-      )}
-      <a
-        className={styles["img-container"]}
-        href="https://github.com/filiphelikar/nova-stranca"
-        target="blank"
-      >
-        <img className={styles["img"]} src="/img/portfolio_page.png" alt="" />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
+        const image = proj.isBeforeAfter ? (
+          <>
+            <Image
+              width={700}
+              height={300}
+              className={styles["img-before"]}
+              src={proj.imageBefore!}
+              alt=""
+            />
+            <Image
+              width={700}
+              height={300}
+              className={styles["img-after"]}
+              src={proj.imageAfter!}
+              alt=""
+            />
+          </>
+        ) : (
+          <Image
+            width={700}
+            height={300}
+            className={styles["img"]}
+            src={proj.image!}
+            alt={proj.title}
           />
-        </div>
-      </a>
-      {isMobile && (
-        <InfoCard
-          heading={"Portfolio Page"}
-          text={translations.Projects.infoProject}
-          Link={"https://github.com/filiphelikar/nova-stranca"}
-          technologies={["next", "react", "ts", "html", "css"]}
-        />
-      )}
-      <a
-        className={styles["img-container"]}
-        href="https://github.com/filiphelikar/nvidia-ui"
-        target="blank"
-      >
-        <img
-          className={styles["img-before"]}
-          src="/img/Nvidia_Desktop-before.png"
-          alt=""
-        />
-        <img
-          className={styles["img-after"]}
-          src="/img/Nvidia_Desktop-after.png"
-          alt=""
-        />
-        <div className="orbit-container">
-          <img
-            className={styles["img-asteroid"]}
-            src="/img/asteroid.png"
-            alt=""
-          />
-        </div>
-      </a>
-      <InfoCard
-        heading={"Nvidia Desktop"}
-        text={translations.Projects.infoNvidia}
-        Link={"https://github.com/filiphelikar/nvidia-ui"}
-        technologies={["electron", "react", "ts", "html", "css"]}
-        last={true}
-      />
+        )
+
+        if (index % 2 !== 0) {
+          return (
+            <React.Fragment key={proj.title}>
+              {!isMobile && card}
+              <a
+                className={styles["img-container"]}
+                href={proj.live}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {image}
+                <div className="orbit-container">
+                  <Image
+                    width={200}
+                    height={120}
+                    className={styles["img-asteroid"]}
+                    src="/img/asteroid.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+              {isMobile && card}
+            </React.Fragment>
+          );
+        } else {
+          return (
+            <React.Fragment key={proj.title}>
+              <a
+                className={styles["img-container"]}
+                href={proj.live}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {image}
+                <div className="orbit-container">
+                  <Image
+                    width={200}
+                    height={120}
+                    className={styles["img-asteroid"]}
+                    src="/img/asteroid.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+              {card}
+            </React.Fragment>
+          )
+        }
+      })}
     </div>
   );
-};
+}
 
-export default Project;
+export default Project
