@@ -2,8 +2,16 @@
 import { useEffect } from "react";
 import Styles from "./Parallax.module.css";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 const Parallax = () => {
+
+  const pathname = usePathname()
+
+  if (pathname !== '/') {
+    return
+  }
+
   useEffect(() => {
     const parallaxScroll = () => {
       const value = window.scrollY;
