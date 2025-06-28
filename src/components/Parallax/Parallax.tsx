@@ -8,10 +8,6 @@ const Parallax = () => {
 
   const pathname = usePathname()
 
-  if (pathname !== '/') {
-    return
-  }
-
   useEffect(() => {
     const parallaxScroll = () => {
       const value = window.scrollY;
@@ -48,6 +44,10 @@ const Parallax = () => {
       window.removeEventListener("scroll", parallaxScroll);
     };
   }, []);
+
+  if (pathname !== '/') {
+    return
+  }
 
   return (
     <>
